@@ -1,50 +1,27 @@
-# Welcome to your Expo app 👋
+# 인프런 강의 실습 - [React Native Expo]
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 강의 정보
 
-## Get started
+- 강의명: [아바타 커뮤니티앱 만들기]
+- 강사: Kyo
 
-1. Install dependencies
+## 진행 내용
 
-   ```bash
-   npm install
-   ```
+### ✅ 완료한 섹션
 
-2. Start the app
+- 섹션 1: 강의자료
+- 섹션 2: 강의소개 및 환경설정
+- 섹션 3: 프로젝트 구조 설정
 
-   ```bash
-   npx expo start
-   ```
+### 🛠️ 실습 내용
 
-In the output, you'll find options to open the app in a
+- `expo-router` 기반 라우팅 구성
+- 탭 네비게이션 구현
+- 아이콘 사용
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 커밋 기준
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- 강의 섹션 단위 or 주요 기능 단위로 커밋
+- 커밋 메시지: `[Inflearn] 섹션 3 - 프로젝트 구조 설정 (Expo Router)`
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
