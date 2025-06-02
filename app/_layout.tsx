@@ -1,7 +1,12 @@
+import queryClient from "@/api/queryClient";
+import useAuth from "@/hooks/queries/useAuth";
+import { QueryClientProvider } from "@tanstack/react-query";
 import { useFonts } from "expo-font";
-import { SplashScreen, Stack } from "expo-router";
+import { Stack } from "expo-router";
+import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import "react-native-reanimated";
+import Toast from "react-native-toast-message";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -19,6 +24,25 @@ export default function RootLayout() {
   if (!loaded) {
     return null;
   }
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <RootNavigator />
+      <Toast />
+    </QueryClientProvider>
+  );
+}
+
+function RootNavigator() {
+  const { auth } = useAuth();
+
+  useEffect(() => {
+    auth.id &&
+      Toast.show({
+        type: "success",
+        text1: `${auth.nickname ?? "회원"}님 환영합니다!`,
+      });
+  });
 
   return (
     <Stack>

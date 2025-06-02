@@ -11,6 +11,7 @@ interface FixedBottomCTAProps {
 
 function FixedBottomCTA({ label, onPress }: FixedBottomCTAProps) {
   const inset = useSafeAreaInsets();
+
   return (
     <View style={[styles.fixed, { paddingBottom: inset.bottom || 12 }]}>
       <CustomButton label={label} onPress={onPress} />
@@ -25,8 +26,8 @@ const styles = StyleSheet.create({
     width: "100%",
     borderTopWidth: StyleSheet.hairlineWidth,
     borderTopColor: colors.GRAY_300,
-    padding: 12,
-    paddingVertical: 16,
+    paddingTop: 12,
+    paddingHorizontal: 16,
   },
 });
 

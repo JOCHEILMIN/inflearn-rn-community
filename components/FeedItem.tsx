@@ -1,8 +1,8 @@
 import { colors } from "@/constants";
-import { Post } from "@/types";
-import { Ionicons, MaterialCommunityIcons, Octicons } from "@expo/vector-icons";
 import React from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Octicons, MaterialCommunityIcons, Ionicons } from "@expo/vector-icons";
+import { Post } from "@/types";
 import Profile from "./Profile";
 
 interface FeedItemProps {
@@ -11,6 +11,7 @@ interface FeedItemProps {
 
 function FeedItem({ post }: FeedItemProps) {
   const isLiked = true;
+
   return (
     <View style={styles.container}>
       <View style={styles.contentContainer}>
@@ -42,11 +43,11 @@ function FeedItem({ post }: FeedItemProps) {
             size={16}
             color={colors.BLACK}
           />
-          <Text>1</Text>
+          <Text style={styles.menuText}>1</Text>
         </Pressable>
         <Pressable style={styles.menu}>
           <Ionicons name="eye-outline" size={16} color={colors.BLACK} />
-          <Text>1</Text>
+          <Text style={styles.menuText}>1</Text>
         </Pressable>
       </View>
     </View>
@@ -63,7 +64,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     color: colors.BLACK,
-    fontWeight: 600,
+    fontWeight: "600",
     marginVertical: 8,
   },
   description: {
@@ -82,7 +83,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    padding: 16,
+    paddingVertical: 16,
     width: "33%",
     gap: 4,
   },

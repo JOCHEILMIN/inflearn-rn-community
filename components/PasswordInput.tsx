@@ -9,6 +9,7 @@ interface Props {
 
 function PasswordInput({ submitBehavior = "blurAndSubmit" }: Props) {
   const { control, setFocus } = useFormContext();
+
   return (
     <Controller
       name="password"
@@ -16,7 +17,7 @@ function PasswordInput({ submitBehavior = "blurAndSubmit" }: Props) {
       rules={{
         validate: (data: string) => {
           if (data.length < 8) {
-            return "비밀번호는 8자 이상 입력해주세요";
+            return "비밀번호는 8자 이상 입력해주세요.";
           }
         },
       }}
@@ -24,7 +25,7 @@ function PasswordInput({ submitBehavior = "blurAndSubmit" }: Props) {
         <InputField
           ref={ref}
           label="비밀번호"
-          placeholder="비밀번호를 입력해주세요"
+          placeholder="비밀번호를 입력해주세요."
           submitBehavior={submitBehavior}
           textContentType="oneTimeCode"
           secureTextEntry

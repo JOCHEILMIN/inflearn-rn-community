@@ -2,9 +2,10 @@ import React from "react";
 import { Controller, useFormContext, useWatch } from "react-hook-form";
 import InputField from "./InputField";
 
-function passwordConfirmInput() {
+function PasswordConfirmInput() {
   const { control } = useFormContext();
   const password = useWatch({ control, name: "password" });
+
   return (
     <Controller
       name="passwordConfirm"
@@ -12,7 +13,7 @@ function passwordConfirmInput() {
       rules={{
         validate: (data: string) => {
           if (data !== password) {
-            return "비밀반호가 일치하지 않습니다.";
+            return "비밀번호가 일치하지 않습니다.";
           }
         },
       }}
@@ -20,9 +21,9 @@ function passwordConfirmInput() {
         <InputField
           ref={ref}
           label="비밀번호 확인"
-          placeholder="비밀번호를 입력해주세요"
-          textContentType="oneTimeCode"
+          placeholder="비밀번호를 입력해주세요."
           secureTextEntry
+          textContentType="oneTimeCode"
           value={value}
           onChangeText={onChange}
           error={error?.message}
@@ -32,4 +33,4 @@ function passwordConfirmInput() {
   );
 }
 
-export default passwordConfirmInput;
+export default PasswordConfirmInput;

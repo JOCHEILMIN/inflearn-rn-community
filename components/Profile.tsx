@@ -4,8 +4,8 @@ import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 
 interface ProfileProps {
   onPress: () => void;
-  imageUri?: string;
   nickname: string;
+  imageUri?: string;
   createdAt: string;
   option?: ReactNode;
 }
@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
     height: 50,
     borderRadius: 50,
     borderWidth: StyleSheet.hairlineWidth,
+    borderColor: colors.GRAY_300,
   },
   nickname: {
     fontSize: 15,
@@ -63,7 +64,7 @@ const styles = StyleSheet.create({
   },
   createdAt: {
     fontSize: 14,
-    color: colors.ORANGE_600,
+    color: colors.GRAY_500,
   },
 });
 
